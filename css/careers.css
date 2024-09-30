@@ -1,0 +1,1581 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .navbar {
+    background-size: cover; 
+    background-position: center; 
+    background-color: red;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    padding-top: 40px;
+    flex-direction: column;
+  }
+  
+  .navbar_nav {
+    height: 10%; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 10; 
+    transition: background-color 0.3s ease; 
+  }
+  
+  .logo img {
+    width: 150px;
+    height: auto;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    padding: 20px;
+  }
+  
+  .nav-links li {
+    position: relative; /* Add relative positioning */
+    margin-left: 2rem;
+  }
+  .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9004d; /* Dropdown background color */
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block; /* Show on hover */
+  }
+  
+  .dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Hover effect */
+  }
+  
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding-right: 30px;
+  }
+  
+  .bar {
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    margin: 3px 0;
+  }
+  
+  .header-text {
+    position: absolute;
+    top: 30%;
+    left: 5%;
+    width: 50%;
+    height: 90%; 
+    display: flex;
+    color: white; 
+  }
+  
+  .header-text h1 {
+    font-size: 70px; 
+    margin: 0; 
+  }
+  
+  .header-text h1 span {
+    color: #f9004d;
+  }
+  
+  /* NAVBAR RESPONSIVE */
+  
+  /* Responsive styles */
+  @media (max-width: 980px) {
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      padding: 10px;
+      gap: 15px;
+      background-color: #f9004d;
+      width: 100%;
+      z-index: 1;
+    }
+    .navbar {
+      width: 100%;
+      height: 10vh; 
+    }
+  
+    .nav-links.active {
+      display: flex;
+    }
+  
+    .dropdown-content {
+      position: static; /* Position for mobile */
+      display: none; /* Hidden by default */
+      background-color: #f9004d; /* Same background */
+      width: 100%; /* Full width */
+    }
+    
+    .dropdown.active .dropdown-content {
+      display: block; /* Show when active */
+    }
+    
+    .menu-toggle {
+      display: flex;
+    }
+  
+    .header-text {
+      top: 10%;
+      width: 70%;
+    }
+  
+    .header-text h1 {
+      font-size: 50px;
+      margin: 0;
+    }
+  }
+  
+  @media (max-width: 400px) {
+    .header-text {
+      top: 10%;
+      width: 90%;
+    }
+    .navbar {
+      width: 100%;
+      height: 10vh;
+    }
+    .header-text h1 {
+      font-size: 35px; 
+      margin: 0; 
+    }
+  }
+
+  
+  /* ============================================================= */
+  /* ============================================================= */
+
+@media (max-width: 600px) {
+
+    #drop-down{
+        display: none;
+    }
+
+    #side-menu{
+        display: none;
+        background-color: red;
+        position: fixed;
+        top: 0px;
+        left: 45%;
+        height: 951px;
+        width: 57%;
+        z-index: 1;
+        overflow-x: hidden;
+    }
+
+    #nav-side-menu{
+        width: 80%;
+        margin: auto;
+        list-style: none;
+        /* border: 2px solid; */
+        position: relative;
+        top: 20px;
+        display: flex;
+        justify-content: end;
+    }
+
+    #close-menubar{
+        font-size: 3vmax;
+        cursor: pointer;
+    }
+
+    #side-menu-options{
+        list-style: none;
+        /* border: 2px solid; */
+        position: relative;
+        top: 40px;
+        width: 90%;
+        height: 70%;
+        margin: auto;
+        padding: 10px;
+        display: flex;
+        font-size: 2vmax;
+        font-family: sans-serif;
+        font-weight: 600;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    #logo {
+        cursor: pointer;
+        width: 27%;
+    }
+
+    header {
+        /* border: 2px solid; */
+        width: 100%;
+        position: fixed;
+        top: 0px;
+        height: 100px;
+        z-index: 1000;
+        position: relative;
+        background-color: transparent;
+    }
+
+    #nav {
+        /* border: 2px solid; */
+        width: 92%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        height: 100%;
+    }
+
+    #sub-list-nav {
+        /* border: 2px solid; */
+        list-style: none;
+        width: 68%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #fff;
+        display: none;
+    }
+
+    #sub-list-nav>li {
+        font-family: sans-serif;
+        font-weight: 500;
+        cursor: pointer;
+        letter-spacing: 1.2px;
+    } 
+
+    #ham-nav{
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        /* display: none; */
+        list-style: none;
+    }
+
+    #ham-nav>li>i{
+        color: red;
+        font-size: 3vmax;
+        cursor: pointer;
+    }
+
+    .bgColor {
+        background-color: #fff;
+        color: black;
+        height: 65px;
+    }
+
+    #banner-bg {
+        border: 2px solid;
+        height: 470px;
+        width: 100%;
+        background-image: url(../assets/careers/bg-image-27.webp);
+        background-repeat: no-repeat;
+        background-size: cover;
+        backdrop-filter: contrast(180%);
+    }
+
+    #sub-main {
+        /* border: 2px solid; */
+        background-color: transparent;
+        margin: auto;
+        width: 75%;
+        height: 70%;
+        position: relative;
+        top: 26%;
+        font-family: sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #sub-main>h1 {
+        text-align: center;
+        font-size: 5vmax;
+        color: red;
+        font-weight: 900;
+    }
+
+    #sub-main>p {
+        color: rgb(183, 181, 181);
+        text-align: center;
+        font-size: 2vmax;
+    }
+
+    #sub-main>button {
+        background-color: rgb(246, 52, 52);
+        color: #fff;
+        height: 13%;
+        width: 46%;
+        border: none;
+        border-radius: 10px;
+        letter-spacing: 1.2px;
+        word-spacing: 2px;
+        font-weight: 400;
+        cursor: pointer;
+
+        transition-property: transform;
+        transition-duration: 0.3s;
+        transition-timing-function: ease;
+        transition-delay: 0s;
+    }
+
+    #sub-main>button:hover {
+        transform: translateY(-4px);
+    }
+
+
+    #job-container{
+        /* border: 2px solid; */
+        width: 100%;
+        height: fit-content;
+    }
+
+    #job-container>h1{
+        text-align: center;
+        font-size: 4vmax;
+        margin-top: 20px;
+        font-family: sans-serif;
+        font-weight: 900;
+    }
+
+    #job-container>p{
+        text-align: center;
+        font-size: 1.6vmax;
+        color: grey;
+        font-weight: 400;
+        font-family: sans-serif;
+    }
+
+
+    #vacancy-card-container{
+        /* border: 2px solid; */
+        height: 70%;
+        width: 99%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 40px;
+        row-gap: 20px;
+    }
+
+    .vacancy-card{
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        border: 2px solid;
+        width: 80%;
+        margin: auto;
+        height: 500px;
+        padding:55px 25px;
+        border-radius: 15px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    /* .vacancy-card:hover{
+        background-color: #f6004c;
+        background: linear-gradient(#f6004c 10%, #000);
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 5;
+        opacity: 0;
+    } */
+
+    .vacancy-card:hover{
+        transform: scale(1.031);
+        cursor: pointer;
+    }
+
+    .vacancy-card>h2{
+        font-size: 2.5vmax;
+        padding: 20px 0px;
+        font-family: sans-serif;
+        font-weight: 600;
+        color: #fff;
+    }
+
+    .vacancy-card>button{
+        background-color: transparent;
+        padding: 10px;
+        font-size: 1.3vmax;
+        width: 60%;
+        border-radius: 6px;
+        color: #fff;
+        border-color: grey;
+        border: 1px solid #fff;
+        margin-top: 10px;
+
+        transition-property: transform;
+        transition-duration: 0.3s;
+        transition-timing-function: ease;
+        transition-delay: 0s;
+    }
+
+    .vacancy-card>button:hover{
+        transform: translateY(-4px);
+        background-color: rgb(246, 52, 52);
+        border: 2px solid rgb(246, 52, 52);
+        cursor: pointer;
+    }
+
+    #vacancy-card-wed{
+        background-image: url(../assets/careers/portfolio-15.webp);
+    }
+
+    #vacancy-card-mobile{
+        background-image: url(../assets/careers/portfolio-16.webp);
+    }
+
+    #vacancy-card-hr{
+        background-image: url(../assets/careers/portfolio-18.webp);
+    }
+
+    #vacancy-card-sales{
+        background-image: url(../assets/careers/portfolio-20.webp);
+    }
+
+
+
+
+    #why{
+        /* border: 2px solid; */
+        margin-top: 30px;
+    }
+
+    #why>h1{
+        text-align: center;
+        font-size: 4vmax;
+        font-weight: 900;
+        font-family: sans-serif;
+    }
+
+    #why>p{
+        text-align: center;
+        font-size: 1.8vmax;
+        font-weight: 100;
+        color: grey;
+        font-family: sans-serif;
+        margin-top: 20px;
+    }
+
+    .cards-container{
+        /* border: 2px solid; */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 40px;
+    }
+
+    .cards-container>aside{
+        width: 89%;
+        margin: auto;
+        height: 550px;
+        /* border: 2px solid; */
+        border-radius: 15px;
+    }
+
+    .card{
+        background-position: 100%;
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+
+    #card-bg1{
+        background-image: url(../assets/careers/career-01.webp);
+    }
+
+    #card-bg2{
+        background-image: url(../assets/careers/career-02.webp);
+    }
+
+    #card-bg3{
+        background-image: url(../assets/careers/career-03.webp);
+    }
+
+    #card-bg4{
+        background-image: url(../assets/careers/career-04.webp);
+    }
+
+    .card-content{
+        padding: 20px 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .card-content>h3{
+        padding: 20px 0px;
+        font-size: 3vmax;
+        font-family: sans-serif;
+        font-weight: 400;
+    }
+
+    .card-content>p{
+        font-size: 1.6vmax;
+        font-family: sans-serif;
+        font-weight: 100;
+        color: grey;
+    }
+
+
+
+
+
+
+
+    #footer-container {
+        /* border: 2px solid; */
+        height: 1200px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #footer-left {
+        /* border: 2px solid; */
+        height: 30%;
+        position: relative;
+        width: 100%;
+        background-color: #f81f01;
+        background-image: url(../assets/careers/big-logo.png);
+        background-repeat: no-repeat;
+        background-position: 60%;
+        border-top-right-radius: 6px;
+    }
+
+    #footer-left::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        background-image: url(../assets/careers/pattern-1.webp);
+    }
+
+    #footer-right {
+        position: relative;
+        /* border: 2px solid; */
+        height: 70%;
+        width: 100%;
+        /* background-color: #f81f01; */
+        background-image: url(../assets/careers/bg-image-8.webp);
+        background-repeat: no-repeat;
+        background-position: 60%;
+        border-top-right-radius: 6px;
+        background-size: cover;
+        background-repeat: repeat;
+    }
+
+    #footer-right::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        background-color: rgba(0, 0, 9, 0.6);
+    }
+
+
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    #logo {
+        cursor: pointer;
+        width: 27%;
+    }
+
+    header {
+        /* border: 2px solid; */
+        width: 100%;
+        position: fixed;
+        top: 0px;
+        height: 120px;
+        z-index: 1000;
+    }
+
+    #nav {
+        /* border: 2px solid; */
+        width: 92%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        height: 100%;
+    }
+
+    #sub-list-nav {
+        /* border: 2px solid; */
+        list-style: none;
+        width: 68%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #fff;
+    }
+
+    #sub-list-nav>li {
+        font-family: sans-serif;
+        font-weight: 500;
+        cursor: pointer;
+        letter-spacing: 1.2px;
+    }
+
+    #ham-nav{
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        display: none;
+    }
+
+    #ham-nav>li>i{
+        color: red;
+        font-size: 2vmax;
+        cursor: pointer;
+    }
+
+    .bgColor {
+        background-color: #fff;
+        color: black;
+        height: 65px;
+    }
+
+    #drop-down{
+        display: none;
+        border: 2px solid;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 80px;
+        left: 40%;
+        width: fit-content;
+        padding: 10px 0px;
+        border-radius: 10px;
+        list-style-type: none; 
+        font-size: 15px;
+        font-family: sans-serif;
+    }
+
+    #drop-down>li{
+        /* border: 2px solid; */
+        width: 100%;
+        padding: 6px 92px 6px 13px;
+    }
+
+    #banner-bg {
+        border: 2px solid;
+        height: 670px;
+        width: 100%;
+        background-image: url(../assets/careers/bg-image-27.webp);
+        background-repeat: no-repeat;
+        background-size: cover;
+        backdrop-filter: contrast(180%);
+    }
+
+    #sub-main {
+        /* border: 2px solid; */
+        background-color: transparent;
+        margin: auto;
+        width: 65%;
+        height: 70%;
+        position: relative;
+        top: 26%;
+        font-family: sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #sub-main>h1 {
+        text-align: center;
+        font-size: 8vmax;
+        color: red;
+        font-weight: 900;
+    }
+
+    #sub-main>p {
+        color: rgb(183, 181, 181);
+        text-align: center;
+        font-size: 2vmax;
+    }
+
+    #sub-main>button {
+        background-color: rgb(246, 52, 52);
+        color: #fff;
+        height: 13%;
+        width: 26%;
+        border: none;
+        border-radius: 10px;
+        letter-spacing: 1.2px;
+        word-spacing: 2px;
+        font-weight: 400;
+        cursor: pointer;
+
+        transition-property: transform;
+        transition-duration: 0.3s;
+        transition-timing-function: ease;
+        transition-delay: 0s;
+    }
+
+    #sub-main>button:hover {
+        transform: translateY(-4px);
+    }
+
+    #job-container{
+        border: 2px solid;
+        width: 100%;
+        height: 700px;
+    }
+
+    #job-container>h1{
+        text-align: center;
+        font-size: 4vmax;
+        margin-top: 20px;
+        font-family: sans-serif;
+        font-weight: 900;
+    }
+
+    #job-container>p{
+        text-align: center;
+        font-size: 1.6vmax;
+        color: grey;
+        font-weight: 400;
+        font-family: sans-serif;
+    }
+
+    #vacancy-card-container{
+        /* border: 2px solid; */
+        height: 70%;
+        width: 99%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 40px;
+    }
+
+    .vacancy-card{
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        border: 2px solid;
+        width: 24%;
+        height: 100%;
+        padding:55px 25px;
+        border-radius: 15px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    /* .vacancy-card:hover{
+        background-color: #f6004c;
+        background: linear-gradient(#f6004c 10%, #000);
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 5;
+        opacity: 0;
+    } */
+
+    .vacancy-card:hover{
+        transform: scale(1.031);
+        cursor: pointer;
+    }
+
+    .vacancy-card>h2{
+        font-size: 2.5vmax;
+        padding: 20px 0px;
+        font-family: sans-serif;
+        font-weight: 600;
+        color: #fff;
+    }
+
+    .vacancy-card>button{
+        background-color: transparent;
+        padding: 10px;
+        font-size: 1.3vmax;
+        width: 60%;
+        border-radius: 6px;
+        color: #fff;
+        border-color: grey;
+        border: 1px solid #fff;
+        margin-top: 10px;
+
+        transition-property: transform;
+        transition-duration: 0.3s;
+        transition-timing-function: ease;
+        transition-delay: 0s;
+    }
+
+    .vacancy-card>button:hover{
+        transform: translateY(-4px);
+        background-color: rgb(246, 52, 52);
+        border: 2px solid rgb(246, 52, 52);
+        cursor: pointer;
+    }
+
+    #vacancy-card-wed{
+        background-image: url(../assets/careers/portfolio-15.webp);
+    }
+
+    #vacancy-card-mobile{
+        background-image: url(../assets/careers/portfolio-16.webp);
+    }
+
+    #vacancy-card-hr{
+        background-image: url(../assets/careers/portfolio-18.webp);
+    }
+
+    #vacancy-card-sales{
+        background-image: url(../assets/careers/portfolio-20.webp);
+    }
+
+
+    #why{
+        /* border: 2px solid; */
+        margin-top: 30px;
+    }
+
+    #why>h1{
+        text-align: center;
+        font-size: 4vmax;
+        font-weight: 900;
+        font-family: sans-serif;
+    }
+
+    #why>p{
+        text-align: center;
+        font-size: 1.8vmax;
+        font-weight: 100;
+        color: grey;
+        font-family: sans-serif;
+        margin-top: 20px;
+    }
+
+    .cards-container{
+        /* border: 2px solid; */
+        display: flex;
+        justify-content: space-between;
+        margin-top: 40px;
+    }
+
+    .cards-container>aside{
+        width: 49%;
+        height: 550px;
+        /* border: 2px solid; */
+        border-radius: 15px;
+    }
+
+    .card{
+        background-position: 100%;
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+
+    #card-bg1{
+        background-image: url(../assets/careers/career-01.webp);
+    }
+
+    #card-bg2{
+        background-image: url(../assets/careers/career-02.webp);
+    }
+
+    #card-bg3{
+        background-image: url(../assets/careers/career-03.webp);
+    }
+
+    #card-bg4{
+        background-image: url(../assets/careers/career-04.webp);
+    }
+
+    .card-content{
+        padding: 20px 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .card-content>h3{
+        padding: 20px 0px;
+        font-size: 3vmax;
+        font-family: sans-serif;
+        font-weight: 400;
+    }
+
+    .card-content>p{
+        font-size: 1.6vmax;
+        font-family: sans-serif;
+        font-weight: 100;
+        color: grey;
+    }
+
+
+
+
+
+
+    
+
+    #footer-container {
+        /* border: 2px solid; */
+        height: 600px;
+        width: 100%;
+        display: flex;
+        align-items: end;
+    }
+
+    #footer-left {
+        /* border: 2px solid; */
+        height: 100%;
+        position: relative;
+        width: 50%;
+        background-color: #f81f01;
+        background-image: url(../assets/careers/big-logo.png);
+        background-repeat: no-repeat;
+        background-position: 60%;
+        border-top-right-radius: 6px;
+    }
+
+    #footer-left::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        background-image: url(../assets/careers/pattern-1.webp);
+    }
+
+    #footer-right {
+        position: relative;
+        /* border: 2px solid; */
+        height: 85%;
+        width: 50%;
+        /* background-color: #f81f01; */
+        background-image: url(.../assets/careers/bg-image-8.webp);
+        background-repeat: no-repeat;
+        background-position: 60%;
+        border-top-right-radius: 6px;
+        background-size: cover;
+        background-repeat: repeat;
+    }
+
+    #footer-right::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        background-color: rgba(0, 0, 9, 0.6);
+    }
+    
+}
+
+@media (min-width: 1025px) {
+
+
+    #side-menu-container , #side-menu{
+        display: none;
+    }
+
+    #logo {
+        cursor: pointer;
+        width: 27%;
+    }
+
+    header {
+        /* border: 2px solid; */
+        width: 100%;
+        position: fixed;
+        top: 0px;
+        height: 120px;
+        z-index: 1000;
+    }
+
+    #nav {
+        /* border: 2px solid; */
+        width: 92%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        height: 100%;
+    }
+
+    #sub-list-nav {
+        /* border: 2px solid; */
+        list-style: none;
+        width: 68%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #sub-list-nav>li>a {
+        font-family: sans-serif;
+        font-weight: 500;
+        cursor: pointer;
+        color: #fff;
+        text-decoration: none;
+        letter-spacing: 1.2px;
+    }
+
+    #sub-list-nav>li>a:hover {
+        color: red;
+    }
+
+    #ham-nav{
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        display: none;
+    }
+
+    #ham-nav>li>i{
+        color: red;
+        font-size: 2vmax;
+        cursor: pointer;
+    }
+
+    .bgColor {
+        background-color: #fff;
+        color: black;
+        height: 65px;
+    }
+
+    #drop-down{
+        /* border: 2px solid; */
+        color: #000;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 70px;
+        left: 39%;
+        width: 20%;
+        padding: 10px 0px;
+        border-radius: 10px;
+        list-style-type: none; 
+        font-size: 15px;
+        font-family: sans-serif;
+        display: none;
+    }
+
+    #drop-down>li{
+        /* border: 2px solid; */
+        width: 90%;
+        margin: auto;
+        padding: 10px;
+        font-weight: 600;
+    }
+
+    #drop-down>li>a{
+        color: #000;
+        text-decoration: none;
+    }
+
+    #drop-down>li:hover{
+        background-color: rgb(243, 110, 110);
+        color: rgb(81, 4, 4);
+        border-radius: 10px;
+    }
+
+    #about:hover #drop-down {
+        display: block;
+    }
+
+    #banner-bg {
+        /* border: 2px solid; */
+        height: 670px;
+        width: 100%;
+        background-image: url(../assets/careers/bg-image-90.webp);
+        background-repeat: no-repeat;
+        background-size: cover;
+        backdrop-filter: contrast(180%);
+    }
+
+    #banner-bg::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 9, 0.3);
+    }
+
+    #sub-main {
+        /* border: 2px solid; */
+        background-color: transparent;
+        margin: auto;
+        width: 65%;
+        height: 70%;
+        position: relative;
+        top: 36%;
+        font-family: sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #sub-main>h1 {
+        text-align: center;
+        font-size: 3.5vmax;
+        color: red;
+        font-weight: 900;
+    }
+
+    #sub-main>p {
+        color: rgb(183, 181, 181);
+        text-align: center;
+        font-size: 2vmax;
+        margin-top: 50px;
+    }
+
+    #sub-main>button {
+        background-color: transparent;
+        color: #fff;
+        height: 13%;
+        width: 26%;
+        border: 2px solid #fff;
+        border-radius: 10px;
+        letter-spacing: 1.2px;
+        word-spacing: 2px;
+        font-weight: 400;
+        cursor: pointer;
+
+        transition-property: transform;
+        transition-duration: 0.3s;
+        transition-timing-function: ease;
+        transition-delay: 0s;
+    }
+
+    #sub-main>button:hover {
+        transform: translateY(-4px);
+        background-color: rgb(246, 52, 52);
+        border: none;
+    }
+
+    #job-container{
+        /* border: 2px solid; */
+        width: 100%;
+        height: 700px;
+    }
+
+    #job-container>h1{
+        text-align: center;
+        font-size: 4vmax;
+        margin-top: 20px;
+        font-family: sans-serif;
+        font-weight: 900;
+    }
+
+    #job-container>p{
+        text-align: center;
+        font-size: 1.6vmax;
+        color: grey;
+        font-weight: 400;
+        font-family: sans-serif;
+    }
+
+
+    #vacancy-card-container{
+        /* border: 2px solid; */
+        height: 70%;
+        width: 99%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 40px;
+    }
+
+    .vacancy-card{
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        border: 2px solid;
+        width: 24%;
+        height: 100%;
+        padding:55px 25px;
+        border-radius: 15px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    /* .vacancy-card:hover{
+        background-color: #f6004c;
+        background: linear-gradient(#f6004c 10%, #000);
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 5;
+        opacity: 0;
+    } */
+
+    .vacancy-card:hover{
+        transform: scale(1.031);
+        cursor: pointer;
+    }
+
+    .vacancy-card>h2{
+        font-size: 2.5vmax;
+        padding: 20px 0px;
+        font-family: sans-serif;
+        font-weight: 600;
+        color: #fff;
+    }
+
+    .vacancy-card>button{
+        background-color: transparent;
+        padding: 10px;
+        font-size: 1.3vmax;
+        width: 60%;
+        border-radius: 6px;
+        color: #fff;
+        border-color: grey;
+        border: 1px solid #fff;
+        margin-top: 10px;
+
+        transition-property: transform;
+        transition-duration: 0.3s;
+        transition-timing-function: ease;
+        transition-delay: 0s;
+    }
+
+    .vacancy-card>button:hover{
+        transform: translateY(-4px);
+        background-color: rgb(246, 52, 52);
+        border: 2px solid rgb(246, 52, 52);
+        cursor: pointer;
+    }
+
+    #vacancy-card-wed{
+        background-image: url(../assets/careers/portfolio-15.webp);
+    }
+
+    #vacancy-card-mobile{
+        background-image: url(../assets/careers/portfolio-16.webp);
+    }
+
+    #vacancy-card-hr{
+        background-image: url(../assets/careers/portfolio-18.webp);
+    }
+
+    #vacancy-card-sales{
+        background-image: url(../assets/careers/portfolio-20.webp);
+    }
+
+
+    #why{
+        /* border: 2px solid; */
+        margin-top: 30px;
+    }
+
+    #why>h1{
+        text-align: center;
+        font-size: 4vmax;
+        font-weight: 900;
+        font-family: sans-serif;
+    }
+
+    #why>p{
+        text-align: center;
+        font-size: 1.8vmax;
+        font-weight: 100;
+        color: grey;
+        font-family: sans-serif;
+        margin-top: 20px;
+    }
+
+    .cards-container{
+        /* border: 2px solid; */
+        display: flex;
+        justify-content: space-between;
+        margin-top: 40px;
+    }
+
+    .cards-container>aside{
+        width: 49%;
+        height: 550px;
+        /* border: 2px solid; */
+        border-radius: 15px;
+    }
+
+    .card{
+        background-position: 100%;
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+
+    #card-bg1{
+        background-image: url(../assets/careers/career-01.webp);
+    }
+
+    #card-bg2{
+        background-image: url(../assets/careers/career-02.webp);
+    }
+
+    #card-bg3{
+        background-image: url(../assets/careers/career-03.webp);
+    }
+
+    #card-bg4{
+        background-image: url(../assets/careers/career-04.webp);
+    }
+
+    .card-content{
+        padding: 20px 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .card-content>h3{
+        padding: 20px 0px;
+        font-size: 3vmax;
+        font-family: sans-serif;
+        font-weight: 400;
+    }
+
+    .card-content>p{
+        font-size: 1.6vmax;
+        font-family: sans-serif;
+        font-weight: 100;
+        color: grey;
+    }
+
+
+    #footer-container {
+        /* border: 2px solid; */
+        height: 600px;
+        width: 100%;
+        display: flex;
+        align-items: end;
+        margin-top: 50px;
+    }
+
+    #footer-left {
+        /* border: 2px solid; */
+        height: 100%;
+        position: relative;
+        width: 50%;
+        background-color: #f81f01;
+        background-image: url(../assets/careers/big-logo.png);
+        background-repeat: no-repeat;
+        background-position: 60%;
+        border-top-right-radius: 6px;
+    }
+
+    #footer-left::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        background-image: url(../assets/careers/pattern-1.webp);
+    }
+
+    #footer-right {
+        position: relative;
+        /* border: 2px solid; */
+        height: 85%;
+        width: 50%;
+        /* background-color: #f81f01; */
+        background-image: url(../assets/careers/bg-image-8.webp);
+        background-repeat: no-repeat;
+        background-position: 60%;
+        border-top-right-radius: 6px;
+        background-size: cover;
+        background-repeat: repeat;
+    }
+
+    #footer-right::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        background-color: rgba(0, 0, 9, 0.6);
+    }
+
+}
+
+
+
+/* ========================================================================= */
+/* ========================================================================= */
+/* FOOTER SECTION */
+/* ========================================================================= */
+/* ========================================================================= */
+
+.footer-section {
+    display: flex;
+    color: white;
+  }
+  
+  .footer-left {
+    /* flex: 1; */
+    width: 40%;
+    background-color: red; 
+    padding: 2em;
+    padding-left: 10px;
+  }
+  
+  .footer-content {
+    text-align: start;
+  }
+  
+  .footer-content h6 {
+    margin: 0.5em 0;
+    font-size: 20px;
+  }
+  
+  .footer-content h1 {
+    margin: 0.5em 0 0.2em 0;
+    font-size: 50px;
+  }
+  
+  .contact-button {
+    padding: 0.5em 1em;
+    color: white;
+    border: 1px solid white;
+    background: transparent;
+    cursor: pointer;
+    margin: 1em 0;
+    font-size: 25px;
+    text-transform: uppercase;
+  }
+  
+  .social-icons ul{
+    display: flex;
+    flex-direction: row;
+    gap: 1em; 
+    margin-bottom: 10px;
+  }
+  .footer-content ul{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    gap: 20px;
+  }
+  
+  .footer-content ul li{
+    
+    list-style-type: none;
+  }
+  
+  .footer-right {
+    flex: 1;
+    background-color: black;
+    padding: 2em;
+  }
+  
+  .footer-links {
+    margin-bottom: 2em; 
+  }
+  
+  .footer-links h2 {
+    margin-bottom: 1em; 
+  }
+  
+  .links-section {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .left-links, .right-links {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .left-links a, .right-links a {
+    color: white; 
+    text-decoration: none; 
+    margin: 0.5em 0;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 2em; 
+  }
+  
+  @media (max-width: 768px) {
+    .footer-section {
+        flex-direction: column; 
+    }
+    .footer-left{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .links-section {
+        display: flex;
+        justify-content: center;
+        flex-direction: column; 
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .footer-left {
+        padding-left: 30px;
+        justify-content: start;
+  
+    }
+  
+    .footer-content {
+        text-align: start;
+    }
+    .footer-content h1 {
+        margin: 0;
+        font-size: 25px;
+    }
+    .right-links{
+        margin-top: 30px;
+    }
+  }
