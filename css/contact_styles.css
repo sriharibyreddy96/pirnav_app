@@ -15,7 +15,8 @@
   .navbar {
     background-size: cover; 
     background-position: center; 
-    background-color: red;
+    /* background-color: red; */
+    background-color: rgba(0, 0, 0, 0.8);
     width: 100%;
     height: 10vh;
     display: flex;
@@ -65,7 +66,7 @@
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9004d; /* Dropdown background color */
+    background-color: #0B7286; /* Dropdown background color */
     min-width: 160px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
@@ -92,6 +93,13 @@
     flex-direction: column;
     cursor: pointer;
     padding-right: 30px;
+  }
+  
+  .menu-toggle i {
+    display: none;
+    font-size: 24px; /* Icon size */
+    color: white; /* Icon color */
+    transition: all 0.3s ease; /* Optional: Smooth transition */
   }
   
   .bar {
@@ -132,7 +140,7 @@
       right: 0;
       padding: 10px;
       gap: 15px;
-      background-color: #f9004d;
+      background-color: #0B7286;
       width: 100%;
       z-index: 1;
     }
@@ -148,7 +156,7 @@
     .dropdown-content {
       position: static; /* Position for mobile */
       display: none; /* Hidden by default */
-      background-color: #f9004d; /* Same background */
+      background-color: #0B7286; /* Same background */
       width: 100%; /* Full width */
     }
     
@@ -158,6 +166,9 @@
     
     .menu-toggle {
       display: flex;
+    }
+    .menu-toggle i {
+      display: block;
     }
   
     .header-text {
@@ -265,7 +276,7 @@ textarea {
 
 .submit-button {
     width: 60%;
-    background-color: red;
+    background-color: #0B7286;
     color: white;
     padding: 20px 0px;
     border: none;
@@ -278,7 +289,7 @@ textarea {
 }
 
 .submit-button:hover {
-    background-color: rgb(255, 54, 54);
+    background-color: #00404d;
 }
 
 /* Responsive Styles */
@@ -373,7 +384,7 @@ textarea {
 }
 
 .card:hover .icon {
-    background-color: red;
+    background-color: #0B7286;
     color: white;
     border: none;
 }
@@ -490,7 +501,7 @@ h3 {
 .footer-left {
     /* flex: 1; */
     width: 40%;
-    background-color: red; 
+    background-color: #0B7286; 
     padding: 2em;
     padding-left: 10px;
 }

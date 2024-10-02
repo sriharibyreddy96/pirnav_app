@@ -14,54 +14,42 @@
 
 <body>
     <header id="header">
-        <nav id="nav">
-            <img src="../assets/home/pirnav_logo.png" alt="logo" id="logo">
-            <ol id="sub-list-nav">
-                <li><a class="nav-option" href="../index.html">Home</a></li>
-                <li id="about">
-                    <a class="nav-option" href="about.html">About</a>
-                    <ol id="drop-down">
-                        <li><a href="about.html">About</a></li>
-                        <li id="gallery"><a href="gallery.html">Gallery</a></li>
-                        <li><a href="careers.html">Careers</a></li>
-                        <li><a href="techstack.html">Tech-Stack</a></li>
-                    </ol>
+        <!-- /* ========================================================================= */
+        /* ========================================================================= */
+                                        /* NAVBAR WITH HEADER SECTION */
+        /* ========================================================================= */
+        /* ========================================================================= */ -->
+         
+    
+         <nav class="navbar">
+            <div class="navbar_nav">
+              <div class="logo">
+                <img src="../assets/home/pirnav_logo.png" alt="" />
+              </div>
+              <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li class="dropdown">
+                  <a href="#">About</a>
+                  <div class="dropdown-content">
+                    <a href="about.html">About</a>
+                    <a href="gallery.html">Gallery</a>
+                    <a href="careers.html">Careers</a>
+                    <a href="techstack.html">Tech-Stack</a>
+                  </div>
                 </li>
-                <li><a class="nav-option" href="services.html">Servies</a></li>
-                <li><a class="nav-option" href="industries.html">Industries</a></li>
-                <li><a class="nav-option" href="portfolio.html">Portfolio</a></li>
-                <li><a class="nav-option" href="healthtech.html">Healthtech</a></li>
-                <li><a class="nav-option" href="ourproducts.html">Our Products</a></li>
-                <li><a class="nav-option" href="contact.html">Contact</a></li>
-            </ol>
+                <li><a href="services.html">Services</a></li>
+            <li><a href="industries.html">Industries</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="healthtech.html">Healthtech</a></li>
+            <li><a href="ourproducts.html">Our Products</a></li>
+            <li><a href="contact.html">Contact</a></li>
+              </ul>
+              <div class="menu-toggle" id="mobile-menu">
+                 <i class="fas fa-bars" id="menu-icon"></i>
+              </div>
+            </div>
+          </nav>
 
-            <ul id="ham-nav">
-                <li id="open-menubar"><i class="fa-solid fa-bars"></i></li>
-            </ul>
-            <aside id="side-menu">
-                <ol id="nav-side-menu">
-                    <li id="close-menubar"><i class="fa-solid fa-xmark"></i></li>
-                </ol>
-                <ul id="side-menu-options">
-                    <li><a class="menu-option" href="index.html">Home</a></li>
-                    <li id="about">
-                    <a class="menu-option" href="about.html">About</a>
-                    <ol id="menu-drop-down">
-                        <li><a href="about.html">About</a></li>
-                        <li id="gallery"><a href="gallery.html">Gallery</a></li>
-                        <li><a href="">Careers</a></li>
-                        <li><a href="techstack.html">Tech-Stack</a></li>
-                    </ol>
-                    </li>
-                    <li><a class="menu-option" href="services.html">Servies</a></li>
-                    <li><a class="menu-option" href="industries.html">Industries</a></li>
-                    <li><a class="menu-option" href="portfolio.html">Portfolio</a></li>
-                    <li><a class="menu-option" href="healthtech.html">Healthtech</a></li>
-                    <li><a class="menu-option" href="ourproducts.html">Our Products</a></li>
-                    <li><a class="menu-option" href="contact.html">Contact</a></li>
-                </ul>
-            </aside>
-        </nav>
     </header>
 
     <main id="banner-bg">
@@ -69,10 +57,11 @@
             <h1>Tech-Stack</h1>
             <p>Latest programming languages and frameworks driving your success
                 13 years of Technical excellence in Information Technology
-                Take a look at our Tech-Stack</p><br><br>
+                Take a look at our Tech-Stack</p><br>
             <button>CONTACT US</button>
         </article>
-    </main> <br>
+    </main> 
+    <br />
 
     <section>
         <h1 class="domain">Web Development</h1>

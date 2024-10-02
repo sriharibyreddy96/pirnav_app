@@ -1,10 +1,47 @@
-// Navbar bars toggle
+// // Navbar bars toggle
+// const mobileMenu = document.getElementById('mobile-menu');
+// const navLinks = document.querySelector('.nav-links');
+// const dropdowns = document.querySelectorAll('.dropdown');
+
+// mobileMenu.addEventListener('click', () => {
+//     navLinks.classList.toggle('active');
+// });
+
+// // Dropdown toggle for mobile view
+// dropdowns.forEach(dropdown => {
+//     dropdown.addEventListener('click', () => {
+//         dropdown.classList.toggle('active');
+//     });
+// });
+
+// // Navbar Sticky
+// window.onscroll = function() {
+//     const navbar = document.querySelector('.navbar_nav');
+//     const sticky = navbar.offsetTop;
+
+//     if (window.pageYOffset > sticky) {
+//         navbar.classList.add('sticky');
+//     } else {
+//         navbar.classList.remove('sticky');
+//     }
+// };
+
 const mobileMenu = document.getElementById('mobile-menu');
 const navLinks = document.querySelector('.nav-links');
 const dropdowns = document.querySelectorAll('.dropdown');
+const menuIcon = document.getElementById('menu-icon');
 
 mobileMenu.addEventListener('click', () => {
     navLinks.classList.toggle('active');
+
+    // Toggle the icon
+    if (menuIcon.classList.contains('fa-bars')) {
+        menuIcon.classList.remove('fa-bars');
+        menuIcon.classList.add('fa-times'); // Show close icon
+    } else {
+        menuIcon.classList.remove('fa-times');
+        menuIcon.classList.add('fa-bars'); // Show hamburger icon
+    }
 });
 
 // Dropdown toggle for mobile view
@@ -25,7 +62,6 @@ window.onscroll = function() {
         navbar.classList.remove('sticky');
     }
 };
-
 
 // Gallery
 

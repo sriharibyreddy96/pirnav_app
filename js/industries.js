@@ -1,10 +1,20 @@
-// Navbar bars toggle
+
 const mobileMenu = document.getElementById('mobile-menu');
 const navLinks = document.querySelector('.nav-links');
 const dropdowns = document.querySelectorAll('.dropdown');
+const menuIcon = document.getElementById('menu-icon');
 
 mobileMenu.addEventListener('click', () => {
     navLinks.classList.toggle('active');
+
+    // Toggle the icon
+    if (menuIcon.classList.contains('fa-bars')) {
+        menuIcon.classList.remove('fa-bars');
+        menuIcon.classList.add('fa-times'); // Show close icon
+    } else {
+        menuIcon.classList.remove('fa-times');
+        menuIcon.classList.add('fa-bars'); // Show hamburger icon
+    }
 });
 
 // Dropdown toggle for mobile view
@@ -25,7 +35,6 @@ window.onscroll = function() {
         navbar.classList.remove('sticky');
     }
 };
-
 
 // Industries
 
