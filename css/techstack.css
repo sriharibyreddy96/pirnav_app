@@ -1,728 +1,212 @@
-* {
-    padding: 0%;
-    margin: 0%;
-    box-sizing: border-box;
+/* ========================================================================= */
+/* HEADER SECTION */
+/* ========================================================================= */
+
+.navbar {
+  background-image: url(../assets/techstack/bg-image-15.webp) !important;
 }
-/* ============================================================= */
-/* ============================================================= */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-  }
-  
-  .navbar {
-    background-size: cover;
-    background-position: center;
-    background-color: rgba(0, 0, 0, 0.8);
-    width: 100%;
-    height: 10vh;
-    display: flex;
-    padding-top: 40px;
-    flex-direction: column;
-  }
-  
-  .navbar_nav {
-    height: 10%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-  }
-  
-  .sticky {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.8);
-    z-index: 10;
-    transition: background-color 0.3s ease;
-  }
-  
-  .logo img {
-    width: 150px;
-    height: auto;
-  }
-  
-  .nav-links {
-    list-style: none;
-    display: flex;
-    padding: 20px;
-  }
-  
-  .nav-links li {
-    position: relative; /* Add relative positioning */
-    margin-left: 2rem;
-  }
-  .nav-links a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #0B7286;
-    min-width: 160px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    border-radius: 5px;
-  }
-  
-  .dropdown:hover .dropdown-content {
-    display: block; 
-  }
-  
-  .dropdown-content a {
-    color: white;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  .dropdown-content a:hover {
-    background-color: rgba(255, 255, 255, 0.2); 
-  }
-  
-  .menu-toggle {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
-      padding-right: 30px;
-    }
-    
-    
-  .menu-toggle {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    padding-right: 30px;
-  }
-  
-  .menu-toggle i {
-    display: none;
-    font-size: 24px; 
-    color: white;
-    transition: all 0.3s ease;
-  }
-  
-  .bar {
-    height: 3px;
-    width: 25px;
-    background-color: white;
-    margin: 3px 0;
-  }
-  
+@media (max-width: 982px) {
   .header-text {
-    position: absolute;
-    top: 30%;
-    left: 5%;
-    width: 50%;
-    height: 90%;
-    display: flex;
-    color: white;
+    top: 11% !important;
   }
-  
-  .header-text h1 {
-    font-size: 70px;
-    margin: 0;
+  .header-text h3{
+    font-size: 24px !important;
   }
-  
-  .header-text h1 span {
-    color: #f9004d;
-  }
-  
-  /* NAVBAR RESPONSIVE */
-  
-  /* Responsive styles */
-  @media (max-width: 980px) {
-    .nav-links {
-      display: none;
-      flex-direction: column;
-      position: absolute;
-      top: 60px;
-      right: 0;
-      padding: 10px;
-      gap: 15px;
-      background-color: #0B7286;
-      width: 100%;
-      z-index: 1;
-    }
-    .navbar {
-      width: 100%;
-      height: 10vh;
-    }
-  
-    .nav-links.active {
-      display: flex;
-    }
-  
-    .dropdown-content {
-      position: static; 
-      display: none;
-      background-color: #0B7286;
-      width: 100%; 
-      border: 0.5px solid white;
-      margin-top: 10px;
-    }
-  
-    .dropdown.active .dropdown-content {
-      display: block; 
-    }
-  
-    .menu-toggle {
-      display: flex;
-    }
-    .menu-toggle i {
-      display: block;
-    }
-  
-    .header-text {
-      top: 10%;
-      width: 70%;
-    }
-  
-    .header-text h1 {
-      font-size: 50px;
-      margin: 0;
-    }
-  }
-  
-  @media (max-width: 400px) {
-    .header-text {
-      top: 10%;
-      width: 90%;
-    }
-    .navbar {
-      width: 100%;
-      height: 10vh;
-    }
-    .header-text h1 {
-      font-size: 35px;
-      margin: 0;
-    }
-  }
-  
-  
-  /* ============================== */
-  /* ============================== */
-  
-
+}
 
 @media (max-width: 600px) {
-    #banner-bg {
-        border: 2px solid;
-        height: 400px;
-        width: 100%;
-        background-image: url(../assets/techstack/bg-image-27.webp);
-        background-repeat: no-repeat;
-        background-size: cover;
-        backdrop-filter: contrast(180%);
-      }
-    
-      #sub-main {
-        background-color: transparent;
-        margin: auto;
-        width: 65%;
-        height: 70%;
-        position: relative;
-        top: 24%;
-        font-family: sans-serif;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-    
-      #sub-main > h1 {
-        text-align: center;
-        font-size: 5vmax;
-        color: red;
-        font-weight: 900;
-      }
-    
-      #sub-main > p {
-        color: rgb(183, 181, 181);
-        text-align: center;
-        font-size: 18px;
-      }
-    
-      #sub-main > button {
-        background-color: #0B7286;
-        color: #fff;
-        height: 13%;
-        width: 60%;
-        border: none;
-        border-radius: 10px;
-        letter-spacing: 1.2px;
-        word-spacing: 2px;
-        font-weight: 300;
-        cursor: pointer;
-    
-        transition-property: transform;
-        transition-duration: 0.3s;
-        transition-timing-function: ease;
-        transition-delay: 0s;
-      }
-    
-      #sub-main > button:hover {
-        transform: translateY(-4px);
-      }
-    .domain{
-        font-family: sans-serif;
-        font-weight: 900;
-        font-size: 30px;
-        text-align: center;
-        padding: 15px 0px 2px 0px;
-    }
+  .header-text {
+    top: 10% !important;
+  }
+}
 
-    #webdev-container,#mobileapp-container,#database-container{
-        margin: auto;
-        padding: 30px;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        flex-wrap: wrap;
-        row-gap: 10px;
-        column-gap: 2px;
-    }
+@media (max-width: 400px) {
+  .header-text {
+    top: 10%;
+  }
+  .header-text h3{
+    font-size: 18px !important;
+  }
+}
 
-    .card{
-        /* width: 45%; */
-        padding: 30px;
-        background-color: #e2e2e2;
-        border-radius: 10px;
-        font-family: sans-serif;
+/* ============================== */
+/* Techstack Styles */
+/* ============================== */
 
+@media (max-width: 600px) {
+  #webdev-container,
+  #mobileapp-container,
+  #database-container {
+    margin: auto;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    column-gap: 2px;
+  }
 
-        transition-property: transform;
-        transition-duration: 0.7s;
-        transition-timing-function: ease;
-        transition-delay: 0.1s;
-    }
+  .card {
+    /* width: 45%; */
+    padding: 30px;
+    background-color: #e2e2e2;
+    border-radius: 10px;
 
-    .card>span>svg{
-        fill: #0B7286;
-        font-size: 28px;
-    }
+    transition-property: transform;
+    transition-duration: 0.7s;
+    transition-timing-function: ease;
+    transition-delay: 0.1s;
+  }
 
-    .card>h2{
-        font-weight: 500;
-        font-size: 20px;
-    }
+  .card > span > svg {
+    fill: #0b7286;
+    font-size: 28px;
+  }
 
-    .card>p{
-        font-weight: 300;
-        font-size: 15px;
-        word-spacing: 3px;
-        color: rgb(90, 89, 89);
-    }
+  .card > h2 {
+    font-weight: 500;
+    font-size: 20px;
+  }
 
-    .card:hover{
-        background: linear-gradient(90deg, #f61b10, #ef0963);
-        color: #fff;
-        cursor: pointer;
-        transform: translateY(-5px); 
-    }
+  .card > p {
+    font-weight: 300;
+    font-size: 15px;
+    word-spacing: 3px;
+    color: rgb(90, 89, 89);
+  }
 
-    .card:hover.card>span>svg{
-        fill: #fff;
-    }
+  .card:hover {
+    background: linear-gradient(90deg, #0b7286, #003a46);
+    color: #fff;
+    cursor: pointer;
+    transform: translateY(-5px);
+  }
 
-    .card:hover.card>p{
-        color: #fff;
-    }
+  .card:hover.card > span > svg {
+    fill: #fff;
+  }
 
+  .card:hover.card > p {
+    color: #fff;
+  }
 }
 
 @media (min-width: 601px) and (max-width: 1024px) {
-    
-  #banner-bg {
-    border: 2px solid;
-    height: 670px;
-    width: 100%;
-    background-image: url(../assets/techstack/bg-image-27.webp);
-    background-repeat: no-repeat;
-    background-size: cover;
-    backdrop-filter: contrast(180%);
-  }
-
-  #sub-main {
-    background-color: transparent;
+  #webdev-container,
+  #mobileapp-container,
+  #database-container {
     margin: auto;
-    width: 65%;
-    height: 70%;
-    position: relative;
-    top: 26%;
-    font-family: sans-serif;
+    padding: 30px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
   }
 
-  #sub-main > h1 {
-    text-align: center;
-    font-size: 60px;
-    color: red;
-    font-weight: 900;
+  .card {
+    width: 40%;
+    padding: 20px 22px;
+    background-color: #e2e2e2;
+    border-radius: 10px;
+
+    transition-property: transform;
+    transition-duration: 0.7s;
+    transition-timing-function: ease;
+    transition-delay: 0.1s;
   }
 
-  #sub-main > p {
-    color: rgb(183, 181, 181);
-    text-align: center;
+  .card > span > svg {
+    fill: #0b7286;
+    font-size: 68px;
+  }
+
+  .card > h2 {
+    font-weight: 500;
     font-size: 25px;
   }
 
-  #sub-main > button {
-    background-color: #0B7286;
+  .card > p {
+    font-weight: 300;
+    font-size: 18px;
+    word-spacing: 3px;
+    color: rgb(90, 89, 89);
+  }
+
+  .card:hover {
+    background: linear-gradient(90deg, #0b7286, #003a46);
     color: #fff;
-    height: 13%;
-    width: 40%;
-    border: none;
-    border-radius: 10px;
-    letter-spacing: 1.2px;
-    word-spacing: 2px;
-    font-weight: 400;
     cursor: pointer;
-
-    transition-property: transform;
-    transition-duration: 0.3s;
-    transition-timing-function: ease;
-    transition-delay: 0s;
+    transform: translateY(-5px);
   }
 
-  #sub-main > button:hover {
-    transform: translateY(-4px);
+  .card:hover.card > span > svg {
+    fill: #fff;
   }
 
-    .domain{
-        font-family: sans-serif;
-        font-weight: 900;
-        font-size: 40px;
-        text-align: center;
-        padding: 15px 0px 2px 0px;
-    }
-
-    #webdev-container,#mobileapp-container,#database-container{
-        margin: auto;
-        padding: 30px;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 30px;
-    }
-
-    .card{
-        width: 40%;
-        padding: 20px 22px;
-        background-color: #e2e2e2;
-        border-radius: 10px;
-        font-family: sans-serif;
-
-
-        transition-property: transform;
-        transition-duration: 0.7s;
-        transition-timing-function: ease;
-        transition-delay: 0.1s;
-    }
-
-    .card>span>svg{
-        fill: #0B7286;
-        font-size: 68px;
-    }
-
-    .card>h2{
-        font-weight: 500;
-        font-size: 25px;
-    }
-
-    .card>p{
-        font-weight: 300;
-        font-size: 18px;
-        word-spacing: 3px;
-        color: rgb(90, 89, 89);
-    }
-
-    .card:hover{
-        background: linear-gradient(90deg, #f61b10, #ef0963);
-        color: #fff;
-        cursor: pointer;
-        transform: translateY(-5px); 
-    }
-
-    .card:hover.card>span>svg{
-        fill: #fff;
-    }
-
-    .card:hover.card>p{
-        color: #fff;
-    }
-    
+  .card:hover.card > p {
+    color: #fff;
+  }
 }
 
 @media (min-width: 1025px) {
-    #banner-bg {
-        border: 2px solid;
-        height: 670px;
-        width: 100%;
-        background-image: url(../assets/techstack/bg-image-27.webp);
-        background-repeat: no-repeat;
-        background-size: cover;
-        backdrop-filter: contrast(180%);
-      }
-    
-      #sub-main {
-        /* border: 2px solid; */
-        background-color: transparent;
-        margin: auto;
-        width: 65%;
-        height: 70%;
-        position: relative;
-        top: 26%;
-        font-family: sans-serif;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-    
-      #sub-main > h1 {
-        text-align: center;
-        font-size: 80px;
-        color: red;
-        font-weight: 900;
-      }
-    
-      #sub-main > p {
-        color: rgb(183, 181, 181);
-        text-align: center;
-        font-size: 2vmax;
-      }
-    
-      #sub-main > button {
-        background-color: #0B7286;
-        color: #fff;
-        height: 13%;
-        width: 26%;
-        border: none;
-        border-radius: 10px;
-        letter-spacing: 1.2px;
-        word-spacing: 2px;
-        font-weight: 400;
-        cursor: pointer;
-    
-        transition-property: transform;
-        transition-duration: 0.3s;
-        transition-timing-function: ease;
-        transition-delay: 0s;
-      }
-    
-      #sub-main > button:hover {
-        transform: translateY(-4px);
-      }
-    
-    .domain{
-        font-family: sans-serif;
-        font-weight: 900;
-        font-size: 50px;
-        text-align: center;
-        padding: 15px 0px 2px 0px;
-    }
-
-    #webdev-container,#mobileapp-container,#database-container{
-        height: fit-content;
-        width: 99%;
-        margin: auto;
-        padding: 30px;
-        display: flex;
-        justify-content: space-between;
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 25px;
-    }
-
-    .card{
-        width: 31%;
-        padding: 20px 22px;
-        background-color: #e2e2e2;
-        border-radius: 10px;
-        font-family: sans-serif;
-
-
-        transition-property: transform;
-        transition-duration: 0.7s;
-        transition-timing-function: ease;
-        transition-delay: 0.1s;
-    }
-
-    .card>span>svg{
-        fill: #0B7286;
-        font-size: 68px;
-    }
-
-    .card>h2{
-        font-weight: 500;
-        font-size: 2vmax;
-    }
-
-    .card>p{
-        font-weight: 300;
-        font-size: 1.5vmax;
-        word-spacing: 3px;
-        color: rgb(90, 89, 89);
-    }
-
-    .card:hover{
-        background: linear-gradient(90deg, #f61b10, #ef0963);
-        color: #fff;
-        cursor: pointer;
-        transform: translateY(-5px); 
-    }
-
-    .card:hover.card>span>svg{
-        fill: #fff;
-    }
-
-    .card:hover.card>p{
-        color: #fff;
-    }
-
-}
-
-
-/* ========================================================================= */
-/* ========================================================================= */
-/* FOOTER SECTION */
-/* ========================================================================= */
-/* ========================================================================= */
-
-.footer-section {
+  #webdev-container,
+  #mobileapp-container,
+  #database-container {
+    height: fit-content;
+    width: 99%;
+    margin: auto;
+    padding: 30px;
     display: flex;
-    color: white;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 25px;
   }
-  
-  .footer-left {
-    width: 40%;
-    background-color: #0B7286; 
-    padding: 2em;
-    padding-left: 10px;
+
+  .card {
+    width: 31%;
+    padding: 20px 22px;
+    background-color: #e2e2e2;
+    border-radius: 10px;
+    transition-property: transform;
+    transition-duration: 0.7s;
+    transition-timing-function: ease;
+    transition-delay: 0.1s;
   }
-  
-  .footer-content {
-    text-align: start;
+
+  .card > span > svg {
+    fill: #0b7286;
+    font-size: 68px;
   }
-  
-  .footer-content h6 {
-    margin: 0.5em 0;
-    font-size: 20px;
+
+  .card > h2 {
+    font-weight: 500;
+    font-size: 2vmax;
   }
-  
-  .footer-content h1 {
-    margin: 0.5em 0 0.2em 0;
-    font-size: 50px;
+
+  .card > p {
+    font-weight: 300;
+    font-size: 1.5vmax;
+    word-spacing: 3px;
+    color: rgb(90, 89, 89);
   }
-  
-  .contact-button {
-    padding: 0.5em 1em;
-    color: white;
-    border: 1px solid white;
-    background: transparent;
+
+  .card:hover {
+    background: linear-gradient(90deg, #0b7286, #003a46);
+    color: #fff;
     cursor: pointer;
-    margin: 1em 0;
-    font-size: 25px;
-    text-transform: uppercase;
+    transform: translateY(-5px);
   }
-  
-  .social-icons ul{
-    display: flex;
-    flex-direction: row;
-    gap: 1em; 
-    margin-bottom: 10px;
+
+  .card:hover.card > span > svg {
+    fill: #fff;
   }
-  .footer-content ul{
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
+
+  .card:hover.card > p {
+    color: #fff;
   }
-  
-  .footer-content ul li{
-    
-    list-style-type: none;
-  }
-  
-  .footer-right {
-    flex: 1;
-    background-color: black;
-    padding: 2em;
-  }
-  
-  .footer-links {
-    margin-bottom: 2em; 
-  }
-  
-  .footer-links h2 {
-    margin-bottom: 1em; 
-  }
-  
-  .links-section {
-    display: flex;
-    justify-content: space-around;
-  }
-  
-  .left-links, .right-links {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .left-links a, .right-links a {
-    color: white; 
-    text-decoration: none; 
-    margin: 0.5em 0;
-  }
-  
-  .footer-bottom {
-    text-align: center;
-    margin-top: 2em; 
-  }
-  
-  @media (max-width: 768px) {
-    .footer-section {
-        flex-direction: column; 
-    }
-    .footer-left{
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
-    .links-section {
-        display: flex;
-        justify-content: center;
-        flex-direction: column; 
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .footer-left {
-        padding-left: 30px;
-        justify-content: start;
-  
-    }
-  
-    .footer-content {
-        text-align: start;
-    }
-    .footer-content h1 {
-        margin: 0;
-        font-size: 25px;
-    }
-    .right-links{
-        margin-top: 30px;
-    }
-  }
+}

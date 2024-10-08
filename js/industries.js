@@ -36,7 +36,37 @@ window.onscroll = function() {
     }
 };
 
-// Industries
+
+// =================================================
+// JavaScript to handle Scroll to Top functionality
+// =================================================
+
+document.addEventListener('DOMContentLoaded', function () {
+    const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+    // Show the button when the user scrolls down
+    window.addEventListener('scroll', function () {
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            scrollToTopBtn.style.display = 'block';  // Show the button
+        } else {
+            scrollToTopBtn.style.display = 'none';  // Hide the button
+        }
+    });
+
+    // Scroll the page to the top smoothly when button is clicked
+    scrollToTopBtn.addEventListener('click', function () {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'  // Enables smooth scrolling
+        });
+    });
+});
+
+  
+// =================================================
+// Mapping Industries list to HTML Page
+// =================================================
+
 
 let industries = [
     {

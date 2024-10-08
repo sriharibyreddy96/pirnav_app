@@ -12,6 +12,7 @@
     />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.28/webfontloader.js" integrity="sha512-v/wOVTkoU7mXEJC3hXnw9AA6v32qzpknvuUF6J2Lbkasxaxn2nYcl+HGB7fr/kChGfCqubVr1n2sq1UFu3Gh1w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="../pirnav_app/css/style.css" />
+    <link rel="stylesheet" href="../pirnav_app/css/global.css" />
     <title>Pirnav Software Solutions</title>
     <link rel="shortcut icon" href="../pirnav_app/assets/home/favicon_pirnav.jpg" type="image/x-icon">
   </head>
@@ -52,15 +53,16 @@
             <i class="fas fa-bars" id="menu-icon"></i>
           </div>
         </div>
-        <div class="header-text">
-          <h1>
-            Empowering <br />
-            IT Services to <br />
-            Thrive with the <br />
-            <span>Power of AI</span>
-          </h1>
-        </div>
       </nav>
+
+      <div class="header-text-home">
+        <h1 class="animated-text">
+          Empowering <br />
+          IT Services to <br />
+          Thrive with the <br />
+          <span>Power of AI</span>
+        </h1>
+      </div>
       
 
     <!-- 
@@ -72,7 +74,7 @@
     -->
 
     <div class="content-section">
-      <h2>Our IT Services</h2>
+      <h2 class="heading-center">Our IT Services</h2>
       <p>
         Thinking of new projects or redefined products ? </br>
         Discover our global IT consulting, delivering quality and cost-effective solutions.
@@ -140,8 +142,8 @@
  /* ========================================================================= */ 
  -->
 
-    <div class="data-section">
-        <h2>Number says a lot</h2>
+    <!-- <div class="data-section">
+        <h2 class="heading-center">Number says a lot</h2>
         <div class="data-container">
             <div class="data-item">
                 <span class="data-number">200<sup>+</sup></span>
@@ -159,7 +161,29 @@
                 <p>Pirnav has proudly served over 500 satisfied global clients across diverse industries. Join our community and become a cherished member of our delighted clientele.</p>
             </div>
         </div>
+    </div> -->
+
+    <div class="data-section" id="data-section">
+        <h2 class="heading-center">Number says a lot</h2>
+        <div class="data-container">
+            <div class="data-item">
+                <span class="data-number" data-count="200">0<sup>+</sup></span>
+                <h6>Developers</h6>
+                <p>With 200+ dedicated IT professionals from prestigious institutions, we excel in various domains, delivering proven expertise and unwavering commitment to excellence.</p>
+            </div>
+            <div class="data-item">
+                <span class="data-number" data-count="1112">0<sup>+</sup></span>
+                <h6>Projects</h6>
+                <p>We've excelled with 1000+ software solutions across Healthcare, Travel and Tourism, FinTech, On-Demand Services, Retail, Real Estate, and various other domains.</p>
+            </div>
+            <div class="data-item">
+                <span class="data-number" data-count="596">0<sup>+</sup></span>
+                <h6>Clients</h6>
+                <p>Pirnav has proudly served over 500 satisfied global clients across diverse industries. Join our community and become a cherished member of our delighted clientele.</p>
+            </div>
+        </div>
     </div>
+    
 
     <!-- 
     /* ========================================================================= */
@@ -171,7 +195,7 @@
 
     <div class="cta-section">
         <p class="italic-text">With a team of more than 200+ qualified staff from prominent institutions, we have excelled in all the modern technologies and frameworks such as NodeJS, Laravel, .Net, .Net Core, Java, Python, ReactJS, React Native, Swift, Kotlin, Objective C, Dart, Flutter, Angular, CodeIgniter, Django, and PHP.</p>
-        <button class="cta-button">VIEW OUR TECH STACK</button>
+        <button class="big-button">VIEW OUR TECH STACK</button>
     </div>
 
     <!-- 
@@ -264,7 +288,7 @@
     /* ========================================================================= */
      -->
      <div class="card-section">
-        <h2 class="centered-heading">Work Samples</h2>
+        <h2 class="heading-center">Work Samples</h2>
         <div class="cards-container">
             <div class="card-work">
                 <div class="card-background" style="background-image: url('../pirnav_app/assets/home/work_sample2.jpeg');">
@@ -322,7 +346,7 @@
                 <li>Secure online and offline payment.</li>
                 <li>Multi-currency and multi-language.</li>
             </ul>
-            <button class="view-more">VIEW MORE</button>
+            <button class="small-button">VIEW MORE</button>
         </div>
     </div>
 
@@ -346,7 +370,7 @@
                 <li> Recipes</li>
                 <li>Alerts and notifications</li>
             </ul>
-            <button class="view-more">VIEW MORE</button>
+            <button class="small-button">VIEW MORE</button>
         </div>
         <div class="info-image" id="web">
             <img src="../pirnav_app/assets/home/project2.webp" alt="Description of Image">
@@ -373,7 +397,7 @@
                 <li> Buy phone credit from all operators.</li>
                 <li>Participate in loyalty programs</li>
             </ul>
-            <button class="view-more">VIEW MORE</button>
+            <button class="small-button">VIEW MORE</button>
         </div>
     </div>
     
@@ -395,7 +419,7 @@
                 <li>Ground services including airport transfers, luggage handling and tour guides</li>
                 <li>Travel insurance to protect pilgrims against any unforeseen circumstances.</li>
             </ul>
-            <button class="view-more">VIEW MORE</button>
+            <button class="small-button">VIEW MORE</button>
         </div>
         <div class="info-image" id="web">
             <img src="../pirnav_app/assets/home/project4.webp" alt="Description of Image">
@@ -463,6 +487,11 @@
         </div>
     </div>
 </footer>
+
+<!-- Scroll to Top Button -->
+<button id="scrollToTopBtn" class="scroll-to-top-btn" aria-label="Scroll to top">
+    <i class="fa-solid fa-chevron-up"></i> <!-- Using Font Awesome Icon -->
+</button>
 
 
     <script src="../pirnav_app/js/script.js"></script>
